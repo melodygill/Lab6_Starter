@@ -96,7 +96,7 @@ class RecipeCard extends HTMLElement {
         `;
 
     // A5. TODO - Append the <style> and <article> elements to the Shadow DOM
-    shadowElement.append(elementRoot);
+    shadowElement.append(this.elementRoot);
     shadowElement.append(style);
   }
 
@@ -130,6 +130,8 @@ class RecipeCard extends HTMLElement {
     //           cardTemplate.html and the data passed in (You should only have one <article>,
     //           do not nest an <article> inside another <article>). You should use Template
     //           literals (tempalte strings) and element.innerHTML for this.
+
+    console.log(data);
 
     this.elementRoot.innerHTML = `
                   <img src="${data.imgSrc}" alt="${data.imgAlt}">
